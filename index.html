@@ -22,37 +22,50 @@
 <body>
   <div class="container">
     <h1>Privacy Policy</h1>
-    <p class="subtitle">Darshan - Hindu HD Wallpapers &middot; Last updated: April 12, 2026</p>
+    <p class="subtitle">Darshan - Hindu HD Wallpapers &middot; Last updated: October 6, 2026</p>
 
     <h2>Overview</h2>
     <p>Darshan ("the App") is a free wallpaper application that provides Hindu-themed HD wallpapers. Your privacy is important to us. This policy explains what data we collect, how we use it, and your choices.</p>
 
     <h2>Information We Collect</h2>
-    <p><strong>We do not collect personal information.</strong> We do not require account creation, login, or any personally identifiable information to use the App.</p>
-    <p>The App may collect the following non-personal data:</p>
+    <p>You do not need an account or login to use the App. The App and its service providers process the following information:</p>
     <ul>
-      <li><strong>Crash reports:</strong> We use Sentry to collect anonymous crash data (device model, OS version, stack traces) to improve app stability. No personal data is included.</li>
-      <li><strong>Advertising data:</strong> Google AdMob may collect device identifiers and usage data to serve ads. See Google's <a href="https://policies.google.com/privacy">Privacy Policy</a> for details.</li>
-      <li><strong>Locally stored favorites:</strong> Your saved wallpapers are stored on your device only using AsyncStorage. This data never leaves your device.</li>
+      <li><strong>Crash and performance reports:</strong> Sentry receives technical information such as device model, operating system, app version, error details, stack traces and diagnostic activity to help us resolve failures and improve reliability. These reports are separate from optional usage reporting.</li>
+      <li><strong>Advertising data:</strong> Google AdMob may process device identifiers, IP addresses, approximate location, app interactions and diagnostic information to deliver and measure ads and prevent fraud. Advertising choices are handled separately from Darshan's optional usage reporting. See Google's <a href="https://policies.google.com/privacy">Privacy Policy</a> for details.</li>
+      <li><strong>Locally stored favorites:</strong> The favorites list is stored on your device using AsyncStorage. We do not upload the list. If you enable optional usage reporting, individual favorite actions and the relevant wallpaper ID can be included in usage reports.</li>
+      <li><strong>Wallpaper requests:</strong> Our backend and image-hosting providers receive ordinary network requests when you browse, search or download. Requests can include the requested wallpaper, category or search query. Our existing download counter records aggregate requests, not a list of people who downloaded an image.</li>
     </ul>
+
+    <h2>Optional Usage Reporting</h2>
+    <p>In releases that offer this feature, Settings &rarr; Help improve Darshan lets you choose whether to send usage reports to our Supabase-hosted backend. It is off by default. You can browse, save and apply wallpapers without enabling it.</p>
+    <p>When enabled, reports include timestamps, app version and build, operating-system platform, screens visited, wallpaper and category IDs, visible-image counts, favorite/save/apply/share actions, action outcomes and durations, search result counts, session and return-day counts, and ad loading, display and paid-event values. Wallpaper and category IDs describe which devotional content you interact with; we do not use them to create a religious-belief profile.</p>
+    <p>The usage-report payload does not include search text, your favorites list, contact or account information, image URLs, raw error messages, advertising IDs or a persistent person or device identifier. A random ID identifies one event only so duplicate retries can be discarded. Ordinary network requests still expose an IP address to the hosting provider; a transient request limit uses it without storing it in the usage-event database.</p>
+    <p>Your device temporarily stores at most 100 unsent events, which expire after seven days. Return-day tracking uses local dates rather than an uploaded device ID. You can mark reports as testing so they are excluded from the default customer reports.</p>
+    <p>Turning reporting off stops future reporting, cancels pending uploads where possible, and removes unsent events and local return-day state. It does not retract reports already received. Changing tester mode also clears unsent events and resets return-day state. These choices do not grant or withdraw advertising consent.</p>
 
     <h2>Third-Party Services</h2>
     <p>The App uses the following third-party services, each with their own privacy policies:</p>
     <ul>
       <li><strong>Google AdMob</strong> - for displaying advertisements (<a href="https://policies.google.com/privacy">Privacy Policy</a>)</li>
       <li><strong>Sentry</strong> - for crash reporting (<a href="https://sentry.io/privacy/">Privacy Policy</a>)</li>
+      <li><strong>Supabase</strong> - for the wallpaper API and optional usage reporting (<a href="https://supabase.com/privacy">Privacy Policy</a>)</li>
+      <li><strong>Cloudflare</strong> - for hosting and delivering wallpaper images (<a href="https://www.cloudflare.com/privacypolicy/">Privacy Policy</a>)</li>
     </ul>
 
     <h2>Permissions</h2>
     <p>The App may request the following device permissions:</p>
     <ul>
       <li><strong>Internet access:</strong> To load wallpapers and display ads.</li>
-      <li><strong>Storage/Media Library:</strong> To save wallpapers to your device gallery.</li>
+      <li><strong>Saving images:</strong> To save wallpapers you choose to your device gallery. Current Android releases do not request broad access to your existing photos or videos. Permission requirements and system-picker behavior can vary by device and operating system.</li>
       <li><strong>Set Wallpaper:</strong> To apply wallpapers directly to your home or lock screen.</li>
     </ul>
 
     <h2>Data Retention</h2>
-    <p>We do not store any personal data on our servers. Crash reports are retained by Sentry for 90 days. Ad-related data is managed by Google per their retention policies.</p>
+    <p>When optional reporting is available, usage events are kept for 90 days and removed by a daily cleanup job. A record can remain until the next daily cleanup. Hosting access logs, Sentry reports and Google's advertising data have separate retention settings and policies; the usage-event limit does not apply to those services.</p>
+    <p>Favorites remain on your device until you remove them or clear the App's storage. You can disable optional reporting in Settings. Contact us using the address below for privacy questions or deletion requests. Because usage events contain no persistent person or device ID, we cannot reliably locate an individual person's historical usage events from their email address; those events expire through the retention process.</p>
+
+    <h2>Security and Sharing</h2>
+    <p>The App uses HTTPS for its production API, images and usage-report uploads. Usage reports are available privately to the developer and service providers processing them on our behalf, not through a public dashboard. We do not sell these reports. Google processes advertising data under its own policies. Sharing a wallpaper through your device's share sheet sends the content to the app or recipient you choose.</p>
 
     <h2>Children's Privacy</h2>
     <p>The App is not directed at children under 13. We do not knowingly collect information from children.</p>
