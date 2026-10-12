@@ -22,7 +22,7 @@
 <body>
   <div class="container">
     <h1>Privacy Policy</h1>
-    <p class="subtitle">Darshan - Hindu HD Wallpapers &middot; Last updated: October 6, 2026</p>
+    <p class="subtitle">Darshan - Hindu HD Wallpapers &middot; Last updated: October 12, 2026</p>
 
     <h2>Overview</h2>
     <p>Darshan ("the App") is a free wallpaper application that provides Hindu-themed HD wallpapers. Your privacy is important to us. This policy explains what data we collect, how we use it, and your choices.</p>
@@ -43,12 +43,19 @@
     <p>Your device temporarily stores at most 100 unsent events, which expire after seven days. Return-day tracking uses local dates rather than an uploaded device ID. You can mark reports as testing so they are excluded from the default customer reports.</p>
     <p>Turning reporting off stops future reporting, cancels pending uploads where possible, and removes unsent events and local return-day state. It does not retract reports already received. Changing tester mode also clears unsent events and resets return-day state. These choices do not grant or withdraw advertising consent.</p>
 
+    <h2>Optional Ad-Free Purchases</h2>
+    <p>Optional ad-free purchases are processed by Google Play. Darshan does not receive or store your card, bank-account or payment-method details. When you buy or restore ad-free access, the app sends the product identifier and Google Play purchase token to our Supabase backend over HTTPS.</p>
+    <p>We check the purchase with Google and privately store its token and token hash, purchase status, acknowledgement status, whether it is a test purchase, and verification and reconciliation-attempt timestamps. These records support restoring access, acknowledgement and handling cancellations or refunds. Google Cloud Pub/Sub delivers purchase-status notifications to our backend; those notices do not grant access without checking Google's purchase records.</p>
+    <p>Purchase records are separate from optional usage analytics, and do not use its ninety-day deletion schedule. Purchase records currently have no automatic expiry. Contact <a href="mailto:srakk@anglernook.com">srakk@anglernook.com</a> for privacy or deletion requests; removing records may affect our ability to restore or support a purchase and does not delete Google's own records. Do not send purchase tokens, private keys or payment credentials by email.</p>
+
     <h2>Third-Party Services</h2>
     <p>The App uses the following third-party services, each with their own privacy policies:</p>
     <ul>
       <li><strong>Google AdMob</strong> - for displaying advertisements (<a href="https://policies.google.com/privacy">Privacy Policy</a>)</li>
       <li><strong>Sentry</strong> - for crash reporting (<a href="https://sentry.io/privacy/">Privacy Policy</a>)</li>
-      <li><strong>Supabase</strong> - for the wallpaper API and optional usage reporting (<a href="https://supabase.com/privacy">Privacy Policy</a>)</li>
+      <li><strong>Supabase</strong> - for the wallpaper API, optional usage reporting and private purchase verification records (<a href="https://supabase.com/privacy">Privacy Policy</a>)</li>
+      <li><strong>Google Play</strong> - for optional ad-free purchases and purchase verification (<a href="https://policies.google.com/privacy">Privacy Policy</a>)</li>
+      <li><strong>Google Cloud Pub/Sub</strong> - for delivering purchase-status notifications to our backend (<a href="https://cloud.google.com/terms/cloud-privacy-notice">Privacy Notice</a>)</li>
       <li><strong>Cloudflare</strong> - for hosting and delivering wallpaper images (<a href="https://www.cloudflare.com/privacypolicy/">Privacy Policy</a>)</li>
     </ul>
 
@@ -65,7 +72,7 @@
     <p>Favorites remain on your device until you remove them or clear the App's storage. You can disable optional reporting in Settings. Contact us using the address below for privacy questions or deletion requests. Because usage events contain no persistent person or device ID, we cannot reliably locate an individual person's historical usage events from their email address; those events expire through the retention process.</p>
 
     <h2>Security and Sharing</h2>
-    <p>The App uses HTTPS for its production API, images and usage-report uploads. Usage reports are available privately to the developer and service providers processing them on our behalf, not through a public dashboard. We do not sell these reports. Google processes advertising data under its own policies. Sharing a wallpaper through your device's share sheet sends the content to the app or recipient you choose.</p>
+    <p>The App uses HTTPS for its production API, images, usage-report uploads and purchase verification. Usage reports and purchase verification records are available privately to the developer and service providers processing them on our behalf, not through a public dashboard. We do not sell these records. Google processes advertising and payment data under its own policies. Sharing a wallpaper through your device's share sheet sends the content to the app or recipient you choose.</p>
 
     <h2>Children's Privacy</h2>
     <p>The App is not directed at children under 13. We do not knowingly collect information from children.</p>
